@@ -1,4 +1,3 @@
-
 var library = document.getElementById('library_Container')
 
 var User = "UserName"
@@ -18,7 +17,16 @@ class Books {
     }
 
     generateBook(){
-        return this.title
+        const div = document.createElement('div'); // Create a new div element
+        div.classList.add("row")
+        div.innerHTML = `
+            <p class="col">${this.title}</p>
+            <p class="col">${this.author}</p>
+            <p class="col">${this.series}</p>
+            <p class="col">${this.isbn}</p>
+            <p class="col">${this.published_year}</p>
+        `;
+        return div;
     }
 }
 
@@ -29,7 +37,7 @@ async function createLibrary() {
     console.log(BookList)
     for(var Book of BookList){
         var NewBook = new Books(Book.title, Book.author, Book.series, Book.cover_image, Book.synopsis, Book.genres, Book.isbn, Book.published_year, Book.isAvailable)
-        console.log(NewBook.generateBook())
+        library.appendChild(NewBook.generateBook())
     }
 }
 createLibrary()
