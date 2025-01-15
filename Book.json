@@ -1,11 +1,10 @@
-{
-    "books": [
+[
       {
         "title": "Project Nemesis",
         "author": "Jeremy Robinson",
         "series": "Nemesis Saga",
         "cover_image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1508298163i/36432084.jpg",
-        "synopsis": "Jon Hudson, lead investigator for the Department of Homeland Security's Fusion Center-P, is tasked with investigating paranormal threats. When a massive creature emerges from the New England wilderness, Hudson teams up with local sheriff Ashley Collins to confront the beast, which seems to be connected to a secret government project.",
+        "synopsis": "Jon Hudson, lead investigator for the Department of Homeland Security's Fusion Center-P, considers his job a joke until a Sasquatch sighting leads him to a research facility in Maine. There, he encounters Nemesis, a monstrous creature born from corporate secrets and a murdered girl's name. As Nemesis heads toward Boston, leaving destruction in its wake, Hudson must coordinate a military response to stop the monster before it annihilates the city.",
         "genres": ["Science Fiction", "Thriller", "Kaiju"],
         "isbn": "9781941539286",
         "published_year": 2012,
@@ -27,8 +26,8 @@
         "author": "Graeme Lyon",
         "series": "Space Marine Battles Novella",
         "cover_image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1404123101i/22604910.jpg",
-        "synopsis": "Sister Superior Miriya of the Adepta Sororitas is renowned for her unyielding faith and combat prowess. When she is assigned to investigate a heretical uprising on the planet Hollos, Miriya uncovers a conspiracy that threatens the very heart of the Imperium.",
-        "genres": ["Science Fiction", "Warhammer 40,000"],
+        "synopsis": "Ultramarines Chaplain Sentina and his squad are sent to secure a fortress on Orath, uncovering a plot to open a new Eye of Terror. As daemonic hordes attack, Sentina must prevent Chaos from consuming an entire sector, facing personal and external battles.",
+        "genres": ["Science Fiction", "Warhammer 40,000", "Military Fiction"],
         "isbn": "9781849708166",
         "published_year": 2014,
         "isAvailable": true
@@ -49,7 +48,6 @@
         "author": "Ryan Tang",
         "series": "Warhammer 40,000",
         "cover_image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1622556205l/58600013.jpg",
-        "synopsis": "As the Indomitus Crusade rages on, the Adeptus Astartes of the Thousand Sons Chapter are tasked with defending the Imperium from the encroaching forces of Chaos. Brother-Captain Ahriman leads his warriors into battle, determined to uphold the honor of his Chapter.",
         "genres": ["Science Fiction", "Warhammer 40,000"],
         "isbn": "9781789998321",
         "published_year": 2021,
@@ -60,7 +58,6 @@
         "author": "Jeremy Robinson",
         "series": "Nemesis Saga",
         "cover_image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1355883785l/16152114.jpg",
-        "synopsis": "The world is in chaos as massive creatures known as kaiju wreak havoc across the globe. Jon Hudson and the Fusion Center-P team join forces with Nemesis, a kaiju with a human conscience, to confront a new threat that could spell the end of humanity.",
         "genres": ["Science Fiction", "Thriller"],
         "isbn": "9781612184511",
         "published_year": 2013,
@@ -71,7 +68,6 @@
         "author": "Alex Scarrow",
         "series": "TimeRiders",
         "cover_image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1327931583l/7192544.jpg",
-        "synopsis": "Liam O'Connor, Maddy Carter, and Sal Vikram are recruited by a secret agency to protect history from time travelers who seek to alter the past. As TimeRiders, they must prevent changes that could destroy the world, all while uncovering the mysteries of their own origins.",
         "genres": ["Science Fiction", "Young Adult"],
         "isbn": "9780141326924",
         "published_year": 2010,
@@ -82,7 +78,6 @@
         "author": "Graham McNeill",
         "series": "Ultramarines",
         "cover_image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1388208710l/22020.jpg",
-        "synopsis": "Captain Uriel Ventris of the Ultramarines is dispatched to the planet Pavonis to quell civil unrest. As he investigates, Uriel uncovers a sinister plot involving an ancient alien artifact known as the Nightbringer, which threatens to unleash unimaginable destruction.",
         "genres": ["Science Fiction", "Warhammer 40,000"],
         "isbn": "9781844160747",
         "published_year": 2002,
@@ -93,7 +88,6 @@
         "author": "Justin D. Hill",
         "series": "Warhammer 40,000",
         "cover_image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1622556205l/58600014.jpg",
-        "synopsis": "Minka Lesk, a young recruit in the Astra Militarum, finds herself as the sole survivor of her regiment after a brutal battle. Determined to honor her fallen comrades, Minka embarks on a perilous mission to deliver vital intelligence that could turn the tide of war.",
         "genres": ["Science Fiction", "Warhammer 40,000"],
         "isbn": "9781844160747",
         "published_year": 2002,
@@ -104,14 +98,12 @@
         "author": "Jeremy Robinson",
         "series": "Nemesis Saga",
         "cover_image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1699268962i/161451023.jpg",
-        "synopsis": "Captain Uriel Ventris of the Ultramarines is dispatched to the planet Pavonis to quell civil unrest. As he investigates, Uriel uncovers a sinister plot involving an ancient alien artifact known as the Nightbringer, which threatens to unleash unimaginable destruction.",
-        "genres": ["Horror", "Thriller","Science Fiction"],
+        "synopsis": "Mark Hawkins, a former park ranger, joins a research vessel studying the Great Pacific Garbage Patch. After a storm, the crew finds themselves on a mysterious island linked to Japan's Unit 731. As crew members disappear, Hawkins uncovers that the island's horrific experiments are ongoing.",
         "isbn": "9781250162298",
         "published_year": 2013,
         "isAvailable": true
       }
     ]
-} 
 
    
   
