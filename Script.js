@@ -18,14 +18,21 @@ class Books {
 
     generateBook(){
         const div = document.createElement('div'); // Create a new div element
-        div.classList.add("row")
+        //add child content to it
+        div.classList.add('row')
         div.innerHTML = `
-            <p class="col">${this.title}</p>
-            <p class="col">${this.author}</p>
+            <div class="col-sm-1">
+                <img class="img-fluid" src = "${this.cover_image}">
+            </div>
+            <div class="col">
+                <h5>${this.title}</h5>
+                <p>By ${this.author}</p>
+            </div>
             <p class="col">${this.series}</p>
-            <p class="col">${this.isbn}</p>
+            <p class="col">ISBN: ${this.isbn}</p>
             <p class="col">${this.published_year}</p>
         `;
+        //then return it
         return div;
     }
 }
