@@ -1,5 +1,8 @@
 #library_Container{
     width: 75%;
-    margin: 0 auto; 
-    background-color: aqua;
+    margin: 2vh auto 1vh; 
+}
+#Statemanger{
+    width: 75%;
+    margin: 2vh auto 1vh; 
 }

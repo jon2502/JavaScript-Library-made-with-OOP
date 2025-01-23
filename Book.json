@@ -14,7 +14,7 @@
         "title": "Horus Rising",
         "author": "Dan Abnett",
         "series": "Horus Heresy",
-        "cover_image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1388208710l/22023.jpg",
+        "cover_image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1355927298i/17156522.jpg",
         "synopsis": "In the 31st millennium, the Emperor of Mankind leads humanity in a Great Crusade to unite the galaxy. Warmaster Horus, his most trusted son, is tasked with leading the Emperor's forces. As Horus grapples with the burden of command, dark forces conspire to corrupt him and bring about the fall of mankind.",
         "genres": ["Science Fiction", "Warhammer 40,000"],
         "isbn": "9781844162949",
@@ -36,7 +36,7 @@
         "title": "Soul Hunter",
         "author": "Aaron Dembski-Bowden",
         "series": "Night Lords",
-        "cover_image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1388208710l/6608378.jpg",
+        "cover_image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1348791698i/6445260.jpg",
         "synopsis": "The Night Lords, a renegade Space Marine Legion, are feared throughout the galaxy for their brutality. Talos, a warrior plagued by visions, leads his warband in a quest for vengeance against the Imperium. As they navigate the treacherous politics of the Chaos warlords, Talos must confront his own destiny.",
         "genres": ["Science Fiction", "Warhammer 40,000"],
         "isbn": "9781844168620",
@@ -47,17 +47,17 @@
         "title": "Strength of a Thousand",
         "author": "Ryan Tang",
         "series": "Warhammer 40,000",
-        "cover_image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1622556205l/58600013.jpg",
+        "cover_image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1585343509i/52746945.jpg",
         "genres": ["Science Fiction", "Warhammer 40,000"],
         "isbn": "9781789998321",
         "published_year": 2021,
-        "isAvailable": true
+        "isAvailable": false
       },
       {
         "title": "Unity",
         "author": "Jeremy Robinson",
-        "series": "Nemesis Saga",
-        "cover_image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1355883785l/16152114.jpg",
+        "series": false,
+        "cover_image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1677827024i/31259455.jpg",
         "genres": ["Science Fiction", "Thriller"],
         "isbn": "9781612184511",
         "published_year": 2013,
@@ -67,7 +67,7 @@
         "title": "TimeRiders",
         "author": "Alex Scarrow",
         "series": "TimeRiders",
-        "cover_image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1327931583l/7192544.jpg",
+        "cover_image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1327957121i/6773432.jpg",
         "genres": ["Science Fiction", "Young Adult"],
         "isbn": "9780141326924",
         "published_year": 2010,
@@ -77,7 +77,7 @@
         "title": "Nightbringer",
         "author": "Graham McNeill",
         "series": "Ultramarines",
-        "cover_image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1388208710l/22020.jpg",
+        "cover_image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1423817670i/23502719.jpg",
         "genres": ["Science Fiction", "Warhammer 40,000"],
         "isbn": "9781844160747",
         "published_year": 2002,
@@ -87,7 +87,7 @@
         "title": "Minka Lesk: The Last Whiteshield",
         "author": "Justin D. Hill",
         "series": "Warhammer 40,000",
-        "cover_image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1622556205l/58600014.jpg",
+        "cover_image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1682421744i/138538490.jpg",
         "genres": ["Science Fiction", "Warhammer 40,000"],
         "isbn": "9781844160747",
         "published_year": 2002,
@@ -101,7 +101,7 @@
         "synopsis": "Mark Hawkins, a former park ranger, joins a research vessel studying the Great Pacific Garbage Patch. After a storm, the crew finds themselves on a mysterious island linked to Japan's Unit 731. As crew members disappear, Hawkins uncovers that the island's horrific experiments are ongoing.",
         "isbn": "9781250162298",
         "published_year": 2013,
-        "isAvailable": true
+        "isAvailable": false
       }
     ]
 
