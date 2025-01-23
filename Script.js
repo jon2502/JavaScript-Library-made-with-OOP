@@ -19,7 +19,11 @@ class Books {
     }
 
     Validatestate(){
-       return true
+        if(Available === true && this.isAvailable === true){
+            return true
+        } else if(Borrowed === true && this.isAvailable === false){
+            return true
+        }
     }
 
     generateBook(){
