@@ -18,8 +18,8 @@ class Books {
         this.isAvailable = isAvailable;
     }
 
-    Checkbookstate(){
-
+    Validatestate(){
+       return true
     }
 
     generateBook(){
@@ -41,13 +41,20 @@ class Books {
             `:``}
             <p class="col">ISBN: ${this.isbn}</p>
             <p class="col">${this.published_year}</p>
+            ${Available === true ?`
+                <div class="col">
+                <button>borrow book</button>
+                </div>`:`
+                <div class="col">
+                <button>retun book</button>
+                </div>`}
         `;
         //then return it
         return div;
     }
 }
 
-async function Checkstate(Available, Borrowed) {
+async function Checkstate() {
     Statemanger.innerHTML=``
     switch(true){
         case Available === true:
@@ -59,7 +66,7 @@ async function Checkstate(Available, Borrowed) {
             changeEvent.addEventListener('click',function(){
                 Available = false
                 Borrowed = true
-                Checkstate(Available, Borrowed)
+                Checkstate()
             })
             createLibrary()
         break;
@@ -73,9 +80,8 @@ async function Checkstate(Available, Borrowed) {
                 Available = true
                 Borrowed = false
                 Checkstate(Available, Borrowed)
-                
             })
-            
+            createLibrary()
         break;
         default:
             Statemanger.innerHTML =`
@@ -84,14 +90,18 @@ async function Checkstate(Available, Borrowed) {
             `
     }
 }
-Checkstate(Available, Borrowed)
+Checkstate()
 
 async function createLibrary() {
+    library.innerHTML=``
     const response = await fetch('Book.json');
     var BookList = await response.json();
     console.log(BookList)
     for(var Book of BookList){
         var NewBook = new Books(Book.title, Book.author, Book.series, Book.cover_image, Book.synopsis, Book.genres, Book.isbn, Book.published_year, Book.isAvailable)
-        library.appendChild(NewBook.generateBook())
+        satus = NewBook.Validatestate()
+        if (satus === true){
+            library.appendChild(NewBook.generateBook())
+        }
     }
 }
