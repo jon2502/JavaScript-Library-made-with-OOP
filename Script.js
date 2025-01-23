@@ -1,8 +1,7 @@
 var library = document.getElementById('library_Container')
 var Statemanger = document.getElementById('Statemanger')
 
-var User = "UserName"
-var Availbe = true
+var Available = true
 var Borrowed = false
 
 //setup class
@@ -18,9 +17,11 @@ class Books {
         this.published_year = published_year;
         this.isAvailable = isAvailable;
     }
-    get(){
+
+    Checkbookstate(){
 
     }
+
     generateBook(){
         const div = document.createElement('div'); // Create a new div element
         //add child content to it
@@ -46,32 +47,35 @@ class Books {
     }
 }
 
-async function Checkstate(Availbe, Borrowed) {
+async function Checkstate(Available, Borrowed) {
     Statemanger.innerHTML=``
     switch(true){
-        case Availbe === true:
+        case Available === true:
             Statemanger.innerHTML=`
-            <h1>avalible books</h1>
+            <h1>Avalible books</h1>
             <button id="changeStat">check borrowed books</button>
             `
             var changeEvent = document.getElementById('changeStat')
             changeEvent.addEventListener('click',function(){
-                Availbe = false
+                Available = false
                 Borrowed = true
-                Checkstate(Availbe, Borrowed)
+                Checkstate(Available, Borrowed)
             })
+            createLibrary()
         break;
         case Borrowed === true:
             Statemanger.innerHTML=`
-            <h1>borrowed books</h1>
+            <h1>Borrowed books</h1>
             <button id="changeStat">check avalible books</button>
             `
             var changeEvent = document.getElementById('changeStat')
             changeEvent.addEventListener('click',function(){
-                Availbe = true
+                Available = true
                 Borrowed = false
-                Checkstate(Availbe, Borrowed)
+                Checkstate(Available, Borrowed)
+                
             })
+            
         break;
         default:
             Statemanger.innerHTML =`
@@ -80,7 +84,7 @@ async function Checkstate(Availbe, Borrowed) {
             `
     }
 }
-Checkstate(Availbe, Borrowed)
+Checkstate(Available, Borrowed)
 
 async function createLibrary() {
     const response = await fetch('Book.json');
