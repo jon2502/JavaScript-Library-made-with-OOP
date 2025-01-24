@@ -1,6 +1,7 @@
 var library = document.getElementById('library_Container')
 var Statemanger = document.getElementById('Statemanger')
 
+//states
 var Available = true
 var Borrowed = false
 
@@ -19,6 +20,7 @@ class Books {
     }
 
     Validatestate(){
+        //get only books of the selected state
         if(Available === true && this.isAvailable === true){
             return true
         } else if(Borrowed === true && this.isAvailable === false){
@@ -45,20 +47,24 @@ class Books {
             `:``}
             <p class="col">ISBN: ${this.isbn}</p>
             <p class="col">${this.published_year}</p>
-            ${Available === true ?`
-                <div class="col">
-                <button>borrow book</button>
-                </div>`:`
-                <div class="col">
-                <button>retun book</button>
-                </div>`}
-        `;
+            <div class="col">
+                <button class="BTN" data-isbn="${this.isbn}">
+                    ${Available === true ?`borrow book`:`retun book`}
+                </button>
+            </div>`;
         //then return it
         return div;
     }
 }
 
-async function Checkstate() {
+async function getData() {
+    const response = await fetch('Book.json');
+    var BookList = await response.json();
+    Checkstate(BookList)
+}
+getData()
+
+async function Checkstate(BookList) {
     Statemanger.innerHTML=``
     switch(true){
         case Available === true:
@@ -70,9 +76,9 @@ async function Checkstate() {
             changeEvent.addEventListener('click',function(){
                 Available = false
                 Borrowed = true
-                Checkstate()
+                Checkstate(BookList)
             })
-            createLibrary()
+            createLibrary(BookList)
         break;
         case Borrowed === true:
             Statemanger.innerHTML=`
@@ -83,29 +89,41 @@ async function Checkstate() {
             changeEvent.addEventListener('click',function(){
                 Available = true
                 Borrowed = false
-                Checkstate(Available, Borrowed)
+                Checkstate(BookList)
             })
-            createLibrary()
+            createLibrary(BookList)
         break;
         default:
             Statemanger.innerHTML =`
             <h3>An error has ocured</h3>
-            <p> there was an error regading the values. please try again or check the code on line 5 to 6 and.</p>
+            <p>there was an error regading the values. please try again or check the code on line 5 to 6 and 67 to 102.</p>
             `
     }
 }
-Checkstate()
 
-async function createLibrary() {
+async function createLibrary(BookList) {
     library.innerHTML=``
-    const response = await fetch('Book.json');
-    var BookList = await response.json();
-    console.log(BookList)
     for(var Book of BookList){
         var NewBook = new Books(Book.title, Book.author, Book.series, Book.cover_image, Book.synopsis, Book.genres, Book.isbn, Book.published_year, Book.isAvailable)
-        satus = NewBook.Validatestate()
-        if (satus === true){
+        if (NewBook.Validatestate() === true){
             library.appendChild(NewBook.generateBook())
         }
     }
+    var BTNAction = document.querySelectorAll(".BTN")
+    BTNAction.forEach(BTN => {
+        BTN.addEventListener("click", function(){
+            const isbn = BTN.getAttribute("data-isbn"); 
+            const bookToUpdate = BookList.find(Book => Book.isbn === isbn)
+            if (bookToUpdate) {
+                bookToUpdate.isAvailable = !bookToUpdate.isAvailable; // Toggle availability
+                Checkstate(BookList); // Re-render the library
+            } else{
+                const ErrorMesage = document.createElement('p')
+                ErrorMesage.innerHTML=`there was an error regading the ISBN number.<br>
+                try againg or try to reload the page.
+                `
+                Statemanger.appendChild(ErrorMesage)
+            }
+        })
+    });
 }
