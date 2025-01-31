@@ -29,31 +29,33 @@ class Books {
     }
 
     generateBook(){
-        const div = document.createElement('div'); // Create a new div element
+        const section = document.createElement('section'); // Create a new div element
+        section.classList.add('box')
         //add child content to it
-        div.classList.add('row', 'mb-2')
-        div.innerHTML = `
-            <div class="col-sm-1">
-                <img class="img-fluid" src = "${this.cover_image}">
-            </div>
-            <div class="col">
-                <h5>${this.title}</h5>
-                <p>By ${this.author}</p>
-            </div>
-             ${this.series ?`
-                <div class="col">
-                    <p>part of the ${this.series} series</p>
+        section.innerHTML = `
+            <div class="row mb-2">
+                <div class="col-sm-1">
+                    <img class="img-fluid" src = "${this.cover_image}">
                 </div>
-            `:``}
-            <p class="col">ISBN: ${this.isbn}</p>
-            <p class="col">${this.published_year}</p>
-            <div class="col">
-                <button class="BTN" data-isbn="${this.isbn}">
-                    ${Available === true ?`borrow book`:`retun book`}
-                </button>
-            </div>`;
+                <div class="col">
+                    <h5>${this.title}</h5>
+                    <p>By ${this.author}</p>
+                </div>
+                ${this.series ?`<p class="col">part of the ${this.series} series</p>`:`<div class="col"></div>`}
+                <p class="col">ISBN: ${this.isbn}</p>
+                <p class="col">First published: ${this.published_year}</p>
+                <div class="col">
+                    <button class="BTN col" data-isbn="${this.isbn}">
+                        ${Available === true ?`borrow book`:`retun book`}
+                    </button>
+                </div>
+            </div>
+            <div>
+                <p>${this.synopsis}</p>
+            </div>
+`;
         //then return it
-        return div;
+        return section;
     }
 }
 
@@ -118,6 +120,7 @@ async function createLibrary(BookList) {
                 bookToUpdate.isAvailable = !bookToUpdate.isAvailable; // Toggle availability
                 Checkstate(BookList); // Re-render the library
             } else{
+                //error mesage
                 const ErrorMesage = document.createElement('p')
                 ErrorMesage.innerHTML=`there was an error regading the ISBN number.<br>
                 try againg or try to reload the page.

@@ -1,3 +1,6 @@
+body{
+    background-color: #f6f5f0;
+}
 #library_Container{
     width: 75%;
     margin: 2vh auto 1vh; 
@@ -5,4 +8,10 @@
 #Statemanger{
     width: 75%;
     margin: 2vh auto 1vh; 
+}
+
+.box{
+    background-color: white;
+    padding: 1vh;
+    margin-bottom: 3vh;
 }
