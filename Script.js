@@ -42,8 +42,14 @@ class Books {
                     <p>By ${this.author}</p>
                 </div>
                 ${this.series ?`<p class="col">part of the ${this.series} series</p>`:`<div class="col"></div>`}
-                <p class="col">ISBN: ${this.isbn}</p>
-                <p class="col">First published: ${this.published_year}</p>
+                <div class="col">
+                    <p>ISBN: ${this.isbn}</p>
+                    <p>First published: ${this.published_year}</p>
+                </div>
+                <div class="col">
+                    <p class="genre"><b>Genres</b></p>
+                    ${this.genres.map((genre)=>`<p class="genre">${genre}</p>`).join('')}
+                </div>
                 <div class="col">
                     <button class="BTN col" data-isbn="${this.isbn}">
                         ${Available === true ?`borrow book`:`retun book`}
