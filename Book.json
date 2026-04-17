@@ -8,7 +8,8 @@
         "genres": ["Science Fiction", "Thriller", "Kaiju"],
         "isbn": "9781941539286",
         "published_year": 2012,
-        "isAvailable": true
+        "total_amount": 2,
+        "amount_borrowed": 0 
       },
       {
         "title": "Horus Rising",
@@ -19,7 +20,8 @@
         "genres": ["Science Fiction", "Warhammer 40,000"],
         "isbn": "9781844162949",
         "published_year": 2006,
-        "isAvailable": true
+        "total_amount": 2,
+        "amount_borrowed": 0 
       },
       {
         "title": "Armour of Faith",
@@ -30,7 +32,8 @@
         "genres": ["Science Fiction", "Warhammer 40,000", "Military Fiction"],
         "isbn": "9781849708166",
         "published_year": 2014,
-        "isAvailable": true
+        "total_amount": 2,
+        "amount_borrowed": 0 
       },
       {
         "title": "Soul Hunter",
@@ -41,7 +44,8 @@
         "genres": ["Science Fiction", "Warhammer 40,000"],
         "isbn": "9781844168620",
         "published_year": 2010,
-        "isAvailable": true
+        "total_amount": 2,
+        "amount_borrowed": 0 
       },
       {
         "title": "Strength of a Thousand",
@@ -52,7 +56,8 @@
         "genres": ["Science Fiction", "Warhammer 40,000"],
         "isbn": "9781789998321",
         "published_year": 2021,
-        "isAvailable": false
+        "total_amount": 1,
+        "amount_borrowed": 1 
       },
       {
         "title": "Unity",
@@ -63,7 +68,8 @@
         "genres": ["Science Fiction", "Thriller"],
         "isbn": "9781612184511",
         "published_year": 2013,
-        "isAvailable": true
+        "total_amount": 2,
+        "amount_borrowed": 0 
       },
       {
         "title": "TimeRiders",
@@ -74,7 +80,8 @@
         "genres": ["Science Fiction", "Young Adult"],
         "isbn": "9780141326924",
         "published_year": 2010,
-        "isAvailable": true
+        "total_amount": 2,
+        "amount_borrowed": 1
       },
       {
         "title": "Nightbringer",
@@ -85,7 +92,8 @@
         "genres": ["Science Fiction", "Warhammer 40,000"],
         "isbn": "9781844160747",
         "published_year": 2002,
-        "isAvailable": true
+        "total_amount": 2,
+        "amount_borrowed": 0 
       },
       {
         "title": "Minka Lesk: The Last Whiteshield",
@@ -96,7 +104,8 @@
         "genres": ["Science Fiction", "Warhammer 40,000"],
         "isbn": "9781844160747",
         "published_year": 2002,
-        "isAvailable": true
+        "total_amount": 2,
+        "amount_borrowed": 0 
       },
       {
         "title": "Island 731",
@@ -107,7 +116,8 @@
         "genres": ["Science Fiction", "Horror", "Thriller"],
         "isbn": "9781250162298",
         "published_year": 2013,
-        "isAvailable": false
+        "total_amount": 2,
+        "amount_borrowed": 2 
       }
     ]
 

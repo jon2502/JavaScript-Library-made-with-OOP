@@ -7,7 +7,7 @@ var Borrowed = false
 
 //setup class
 class Books {
-    constructor(title, author, series, cover_image, synopsis, genres, isbn, published_year, isAvailable) {
+    constructor(title, author, series, cover_image, synopsis, genres, isbn, published_year, total_amount, amount_borrowed) {
         this.title = title;
         this.author = author;
         this.series = series;
@@ -16,14 +16,15 @@ class Books {
         this.genres = genres;
         this.isbn = isbn;
         this.published_year = published_year;
-        this.isAvailable = isAvailable;
+        this.total_amount = total_amount
+        this.amount_borrowed = amount_borrowed 
     }
 
     Validatestate(){
         //get only books of the selected state
-        if(Available === true && this.isAvailable === true){
+        if(Available === true && this.total_amount > this.amount_borrowed){
             return true
-        } else if(Borrowed === true && this.isAvailable === false){
+        } else if(Borrowed === true && this.amount_borrowed > 0){
             return true
         }
     }
@@ -49,6 +50,10 @@ class Books {
                 <div class="col">
                     <p class="genre"><b>Genres</b></p>
                     ${this.genres.map((genre)=>`<p class="genre">${genre}</p>`).join('')}
+                </div>
+                <div class="col">
+                    <p class="genre"><b>Amount avliable</b></p>
+                    <p>${this.total_amount === this.amount_borrowed?`Not avaliable`:`${this.total_amount-this.amount_borrowed}`}</p>
                 </div>
                 <div class="col">
                     <button class="BTN col" data-isbn="${this.isbn}">
@@ -112,7 +117,7 @@ async function Checkstate(BookList) {
 async function createLibrary(BookList) {
     library.innerHTML=``
     for(var Book of BookList){
-        var NewBook = new Books(Book.title, Book.author, Book.series, Book.cover_image, Book.synopsis, Book.genres, Book.isbn, Book.published_year, Book.isAvailable)
+        var NewBook = new Books(Book.title, Book.author, Book.series, Book.cover_image, Book.synopsis, Book.genres, Book.isbn, Book.published_year, Book.total_amount, Book.amount_borrowed)
         if (NewBook.Validatestate() === true){
             library.appendChild(NewBook.generateBook())
         }
@@ -123,8 +128,28 @@ async function createLibrary(BookList) {
             const isbn = BTN.getAttribute("data-isbn"); 
             const bookToUpdate = BookList.find(Book => Book.isbn === isbn)
             if (bookToUpdate) {
-                bookToUpdate.isAvailable = !bookToUpdate.isAvailable; // Toggle availability
-                Checkstate(BookList); // Re-render the library
+                // Borrow or return books
+                    switch(true){
+                    case Available === true:
+                        bookToUpdate.amount_borrowed =  bookToUpdate.amount_borrowed + 1
+                        if(bookToUpdate.amount_borrowed>bookToUpdate.total_amount){
+                            bookToUpdate.amount_borrowed = bookToUpdate.total_amount
+                        }
+                        Checkstate(BookList); // Re-render the library*/
+                    break;
+                    case Borrowed === true:
+                        bookToUpdate.amount_borrowed =  bookToUpdate.amount_borrowed - 1
+                        if(bookToUpdate.amount_borrowed<0){
+                            bookToUpdate.amount_borrowed = 0
+                        }
+                        Checkstate(BookList);
+                    break;
+                    default:
+                        const ErrorMesage = document.createElement('p')
+                        ErrorMesage.innerHTML=`there was an error regading borrowing or returning book.<br>
+                        try againg or try to reload the page.`
+                        Statemanger.appendChild(ErrorMesage)
+                }
             } else{
                 //error mesage
                 const ErrorMesage = document.createElement('p')
